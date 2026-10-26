@@ -22,7 +22,7 @@ class AnggotaController extends Controller
      */
     public function create()
     {
-        return view('admin.anggota.create');
+        return view('anggota.create');
     }
 
     /**
