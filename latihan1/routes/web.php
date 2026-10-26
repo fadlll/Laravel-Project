@@ -36,7 +36,7 @@ Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(
 
     // Khusus role User biasa / Admin (Akses Menu Anggota)
     Route::middleware('cek.role:admin,user')->group(function () {
-        Route::resource('anggota', AnggotaController::class);
+        Route::resource('anggota', AnggotaController::class)->parameters(['anggota' => 'anggota']);
     });
 
 });
